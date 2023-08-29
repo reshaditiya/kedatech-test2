@@ -10,7 +10,7 @@ export function Navbar() {
       </span>
       <span className="hidden items-center md:flex md:gap-12">
         <span className="hidden h-full items-center gap-12 lg:flex">
-          <a href="#">
+          <a href="#about">
             <Button variant="link">Tentang</Button>
           </a>
           <a href="#">

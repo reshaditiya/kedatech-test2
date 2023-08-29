@@ -5,7 +5,8 @@ import { Navbar } from './components/navbar';
 
 function App() {
   return (
-    <main className="mx-auto max-w-7xl">
+    <main className="mx-auto">
+      <img src="clouds/cloud-top.svg" alt="" className="absolute -z-10" />
       <Navbar />
       <Hero />
       <Clients />
