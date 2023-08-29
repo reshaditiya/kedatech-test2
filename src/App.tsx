@@ -1,3 +1,4 @@
+import { Contact } from './components/contact';
 import { Testimonials } from './components/testimonials';
 import { Pricing } from './components/pricing';
 import { Features } from './components/features';
@@ -15,6 +16,7 @@ function App() {
       <Features />
       <Pricing />
       <Testimonials />
+      <Contact />
     </main>
   );
 }
