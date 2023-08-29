@@ -1,3 +1,4 @@
+import { Prices } from './components/prices';
 import { Features } from './components/features';
 import { Clients } from './components/clients';
 import { Hero } from './components/hero';
@@ -11,6 +12,7 @@ function App() {
       <Hero />
       <Clients />
       <Features />
+      <Prices />
     </main>
   );
 }

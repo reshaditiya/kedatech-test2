@@ -33,7 +33,7 @@ export function Features() {
         title="Tentang UpTech"
         description="UpTech memiliki fitur yang dapat mempermudah manajemen bisnis Anda."
       />
-      <div className="mt-7 grid gap-7 md:mt-10 lg:mt-14 lg:grid-cols-3">
+      <div className="mt-10 grid gap-7 md:mt-10 lg:mt-14 lg:grid-cols-3">
         {features.map((feature) => (
           <FeatureCard
             key={feature.title}
