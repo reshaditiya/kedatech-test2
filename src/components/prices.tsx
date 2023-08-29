@@ -39,7 +39,10 @@ const prices = [
 
 export function Prices() {
   return (
-    <section className="relative px-7 py-14 md:px-8 md:py-24 lg:px-14 lg:py-28">
+    <section
+      className="relative px-7 py-14 md:px-8 md:py-24 lg:px-14 lg:py-28"
+      id="pricing"
+    >
       <SectionTitle
         title="Pilih Paket Yang Sesuai"
         description="Kami menyediakan paket sesuai dengan kebutuhan yang anda inginkan,"
