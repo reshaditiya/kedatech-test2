@@ -19,7 +19,8 @@ export function Button({
     link: 'flex gap-2 items-center font-display font-semibold text-cyan-800 hover:border-b-2 hover:border-cyan-800 transition h-6',
     outline:
       'flex gap-2 items-center py-4 px-12 border border-cyan-800 text-cyan-800 rounded-2xl font-display font-semibold hover:bg-cyan-100 active:bg-cyan-200 cursor-pointer transition',
-    secondary: '',
+    secondary:
+      'flex gap-2 items-center py-4 px-12 bg-cyan-50 text-cyan-800 rounded-2xl font-display font-semibold hover:bg-cyan-100 active:bg-cyan-200 cursor-pointer transition',
   };
 
   return (
