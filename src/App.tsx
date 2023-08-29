@@ -4,11 +4,11 @@ import { Navbar } from './components/navbar';
 
 function App() {
   return (
-    <>
+    <main className="mx-auto max-w-7xl">
       <Navbar />
       <Hero />
       <Clients />
-    </>
+    </main>
   );
 }
 
