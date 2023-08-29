@@ -8,8 +8,7 @@ function smoothScroll(
   const element = document.getElementById(target);
   const headerOffset = 0;
   const elementPosition = element?.getBoundingClientRect().top;
-  const offsetPosition =
-    elementPosition ?? 0 + window.pageYOffset - headerOffset;
+  const offsetPosition = elementPosition ?? 0 + window.scrollY - headerOffset;
 
   e.preventDefault();
 
