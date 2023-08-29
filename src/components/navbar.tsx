@@ -13,10 +13,10 @@ export function Navbar() {
           <a href="#about">
             <Button variant="link">Tentang</Button>
           </a>
-          <a href="#">
+          <a href="#pricing">
             <Button variant="link">Harga</Button>
           </a>
-          <a href="#">
+          <a href="#contact">
             <Button variant="link">Kontak</Button>
           </a>
         </span>
