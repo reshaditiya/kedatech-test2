@@ -1,6 +1,7 @@
 import { twMerge } from 'tailwind-merge';
 import { Button } from './button';
 import { Check } from '@phosphor-icons/react';
+import { formatNumberTothousand } from '../utils/data-display';
 
 export function PricingCard({
   highlighted = false,
@@ -37,7 +38,10 @@ export function PricingCard({
             highlighted && 'text-white',
           )}
         >
-          <span className="font-display text-5xl">{price}rb</span>/ bulan
+          <span className="font-display text-5xl">
+            {formatNumberTothousand(price)}rb
+          </span>
+          / bulan
         </div>
         <p className={twMerge('mt-1 text-slate-800', 'text-slate-50')}>
           {description}
