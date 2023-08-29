@@ -13,7 +13,10 @@ import { Button } from './button';
 
 export function Contact() {
   return (
-    <section className="px-7 py-14 md:px-8 md:py-24 lg:px-14 lg:py-28">
+    <section
+      className="px-7 py-14 md:px-8 md:py-24 lg:px-14 lg:py-28"
+      id="contact"
+    >
       <div className="rounded-3xl border-2 border-slate-50 bg-white p-10">
         <SectionTitle
           title="Hubungi Kami"
