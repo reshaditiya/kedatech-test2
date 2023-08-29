@@ -4,7 +4,7 @@ import { Receipt, ArrowRight } from '@phosphor-icons/react';
 export function Navbar() {
   return (
     <nav className="flex justify-between px-14 py-6">
-      <span className="flex items-center gap-2 font-display text-lg font-bold text-slate-800">
+      <span className="flex items-center gap-2 font-display text-lg font-bold text-white">
         <Receipt className="h-6 w-6" weight="bold" />
         UpTech
       </span>
