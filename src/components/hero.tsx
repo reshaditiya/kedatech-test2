@@ -5,7 +5,7 @@ export function Hero() {
   return (
     <section
       className="
-			relative flex flex-col items-center gap-8 overflow-hidden px-7 py-14 md:px-8 md:py-24 lg:flex-row lg:px-14 lg:py-28"
+			relative flex flex-col items-center gap-8 px-7 py-14 md:px-8 md:py-24 lg:flex-row lg:px-14 lg:py-28"
     >
       <div className="max-w-2xl">
         <h1 className="text-center font-display text-4xl font-bold leading-tight text-slate-950 md:text-5xl md:leading-tight lg:text-left lg:text-7xl lg:leading-tight">
