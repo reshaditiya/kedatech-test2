@@ -1,3 +1,4 @@
+import { FooterBanner } from './components/footer-banner';
 import { Contact } from './components/contact';
 import { Testimonials } from './components/testimonials';
 import { Pricing } from './components/pricing';
@@ -9,7 +10,7 @@ import { Navbar } from './components/navbar';
 function App() {
   return (
     <main className="mx-auto">
-      <img src="clouds/cloud-top.svg" alt="" className="absolute -z-10" />
+      <img src="/clouds/cloud-top.svg" alt="" className="absolute -z-10" />
       <Navbar />
       <Hero />
       <Clients />
@@ -17,6 +18,7 @@ function App() {
       <Pricing />
       <Testimonials />
       <Contact />
+      <FooterBanner />
     </main>
   );
 }
