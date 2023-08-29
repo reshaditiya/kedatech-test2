@@ -1,3 +1,4 @@
+import { Footer } from './components/footer';
 import { FooterBanner } from './components/footer-banner';
 import { Contact } from './components/contact';
 import { Testimonials } from './components/testimonials';
@@ -19,6 +20,7 @@ function App() {
       <Testimonials />
       <Contact />
       <FooterBanner />
+      <Footer />
     </main>
   );
 }
