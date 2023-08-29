@@ -1,6 +1,24 @@
 import { Button } from './button';
 import { Receipt, ArrowRight } from '@phosphor-icons/react';
 
+function smoothScroll(
+  e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+  target: string,
+) {
+  const element = document.getElementById(target);
+  const headerOffset = 0;
+  const elementPosition = element?.getBoundingClientRect().top;
+  const offsetPosition =
+    elementPosition ?? 0 + window.pageYOffset - headerOffset;
+
+  e.preventDefault();
+
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: 'smooth',
+  });
+}
+
 export function Navbar() {
   return (
     <nav className="flex justify-between px-14 py-6">
@@ -10,13 +28,13 @@ export function Navbar() {
       </span>
       <span className="hidden items-center md:flex md:gap-12">
         <span className="hidden h-full items-center gap-12 lg:flex">
-          <a href="#about">
+          <a href="/" onClick={(e) => smoothScroll(e, 'about')}>
             <Button variant="link">Tentang</Button>
           </a>
-          <a href="#pricing">
+          <a href="/" onClick={(e) => smoothScroll(e, 'pricing')}>
             <Button variant="link">Harga</Button>
           </a>
-          <a href="#contact">
+          <a href="/" onClick={(e) => smoothScroll(e, 'contact')}>
             <Button variant="link">Kontak</Button>
           </a>
         </span>
