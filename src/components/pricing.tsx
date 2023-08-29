@@ -37,7 +37,7 @@ const prices = [
   },
 ];
 
-export function Prices() {
+export function Pricing() {
   return (
     <section
       className="relative px-7 py-14 md:px-8 md:py-24 lg:px-14 lg:py-28"
