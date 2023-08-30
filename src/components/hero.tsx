@@ -1,5 +1,6 @@
-import { ArrowRight } from '@phosphor-icons/react';
+import { smoothScroll } from '../lib/utils';
 import { Button } from './button';
+import { LoginModal } from './login-modal';
 
 export function Hero() {
   return (
@@ -16,11 +17,15 @@ export function Hero() {
           mudah menggunakan UpTech.
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-4 lg:justify-start">
-          <Button>
-            Masuk
-            <ArrowRight className="h-5 w-5" weight="bold" />
+          <LoginModal />
+          <Button
+            variant="outline"
+            onClick={(e) => {
+              smoothScroll(e, 'contact');
+            }}
+          >
+            Hubungi Kami
           </Button>
-          <Button variant="outline">Hubungi Kami</Button>
         </div>
       </div>
       <img

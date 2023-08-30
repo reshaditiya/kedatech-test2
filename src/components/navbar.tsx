@@ -4,23 +4,7 @@ import { Receipt, ArrowRight } from '@phosphor-icons/react';
 import { Fragment } from 'react';
 import { List } from '@phosphor-icons/react';
 import { LoginModal } from './login-modal';
-
-function smoothScroll(
-  e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
-  target: string,
-) {
-  const element = document.getElementById(target);
-  const headerOffset = 0;
-  const elementPosition = element?.getBoundingClientRect().top;
-  const offsetPosition = elementPosition ?? 0 + window.scrollY - headerOffset;
-
-  e.preventDefault();
-
-  window.scrollTo({
-    top: offsetPosition,
-    behavior: 'smooth',
-  });
-}
+import { smoothScroll } from '../lib/utils';
 
 export function Navbar() {
   return (
@@ -30,15 +14,15 @@ export function Navbar() {
         UpTech
       </span>
       <span className="hidden items-center md:gap-12 lg:flex">
-        <a href="/" onClick={(e) => smoothScroll(e, 'about')}>
-          <Button variant="link">Tentang</Button>
-        </a>
-        <a href="/" onClick={(e) => smoothScroll(e, 'pricing')}>
-          <Button variant="link">Harga</Button>
-        </a>
-        <a href="/" onClick={(e) => smoothScroll(e, 'contact')}>
-          <Button variant="link">Kontak</Button>
-        </a>
+        <Button variant="link" onClick={(e) => smoothScroll(e, 'about')}>
+          Tentang
+        </Button>
+        <Button variant="link" onClick={(e) => smoothScroll(e, 'pricing')}>
+          Harga
+        </Button>
+        <Button variant="link" onClick={(e) => smoothScroll(e, 'contact')}>
+          Kontak
+        </Button>
         <LoginModal />
       </span>
       <MobileNav />
@@ -70,56 +54,44 @@ function MobileNav() {
             <div className="flex flex-col gap-2 px-4 py-4">
               <Menu.Item>
                 {({ close }) => (
-                  <a
-                    href="/"
+                  <Button
+                    variant="ghost"
+                    className="flex w-full justify-center py-3"
                     onClick={(e) => {
                       smoothScroll(e, 'about');
                       close();
                     }}
                   >
-                    <Button
-                      variant="ghost"
-                      className="flex w-full justify-center py-3"
-                    >
-                      Tentang
-                    </Button>
-                  </a>
+                    Tentang
+                  </Button>
                 )}
               </Menu.Item>
               <Menu.Item>
                 {({ close }) => (
-                  <a
-                    href="/"
+                  <Button
+                    variant="ghost"
+                    className="flex w-full justify-center py-3"
                     onClick={(e) => {
-                      close();
                       smoothScroll(e, 'pricing');
+                      close();
                     }}
                   >
-                    <Button
-                      variant="ghost"
-                      className="flex w-full justify-center py-3"
-                    >
-                      Harga
-                    </Button>
-                  </a>
+                    Harga
+                  </Button>
                 )}
               </Menu.Item>
               <Menu.Item>
                 {({ close }) => (
-                  <a
-                    href="/"
+                  <Button
+                    variant="ghost"
+                    className="flex w-full justify-center py-3"
                     onClick={(e) => {
-                      close();
                       smoothScroll(e, 'contact');
+                      close();
                     }}
                   >
-                    <Button
-                      variant="ghost"
-                      className="flex w-full justify-center py-3"
-                    >
-                      Kontak
-                    </Button>
-                  </a>
+                    Kontak
+                  </Button>
                 )}
               </Menu.Item>
               <Menu.Item>

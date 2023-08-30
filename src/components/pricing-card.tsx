@@ -1,7 +1,7 @@
 import { twMerge } from 'tailwind-merge';
 import { Button } from './button';
 import { Check } from '@phosphor-icons/react';
-import { formatNumberTothousand } from '../utils/data-display';
+import { formatNumberTothousand } from '../lib/utils';
 
 export function PricingCard({
   highlighted = false,
