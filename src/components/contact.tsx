@@ -66,7 +66,7 @@ export function Contact() {
                 weight="duotone"
               />
               <input
-                type="text"
+                type="email"
                 placeholder="Email"
                 className="w-full rounded-3xl border-2 border-slate-200 py-4 pl-14 pr-5"
               />
