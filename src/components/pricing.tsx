@@ -1,5 +1,7 @@
+import { defaultAnimation } from '../lib/animation';
 import { PricingCard } from './pricing-card';
 import { SectionTitle } from './section-title';
+import { motion } from 'framer-motion';
 
 const prices = [
   {
@@ -39,7 +41,14 @@ const prices = [
 
 export function Pricing() {
   return (
-    <section
+    <motion.section
+      variants={defaultAnimation}
+      initial="initial"
+      whileInView="animate"
+      viewport={{
+        once: true,
+        margin: '-240px',
+      }}
       className="relative px-7 py-14 md:px-8 md:py-24 lg:px-14 lg:py-28"
       id="pricing"
     >
@@ -59,6 +68,6 @@ export function Pricing() {
           />
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }

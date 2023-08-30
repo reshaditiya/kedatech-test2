@@ -9,10 +9,19 @@ import {
   User,
 } from '@phosphor-icons/react';
 import { Button } from './button';
+import { motion } from 'framer-motion';
+import { defaultAnimation } from '../lib/animation';
 
 export function Contact() {
   return (
-    <section
+    <motion.section
+      variants={defaultAnimation}
+      initial="initial"
+      whileInView="animate"
+      viewport={{
+        once: true,
+        margin: '-240px',
+      }}
       className="px-7 py-14 md:px-8 md:py-24 lg:px-14 lg:py-28"
       id="contact"
     >
@@ -77,6 +86,6 @@ export function Contact() {
           </form>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

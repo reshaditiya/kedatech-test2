@@ -1,6 +1,8 @@
+import { defaultAnimation } from '../lib/animation';
 import { FeatureCard } from './feature-card';
 import { SectionTitle } from './section-title';
 import { MagicWand, BoundingBox, Package } from '@phosphor-icons/react';
+import { motion } from 'framer-motion';
 
 const features = [
   {
@@ -25,7 +27,14 @@ const features = [
 
 export function Features() {
   return (
-    <section
+    <motion.section
+      variants={defaultAnimation}
+      initial="initial"
+      whileInView="animate"
+      viewport={{
+        once: true,
+        margin: '-240px',
+      }}
       className="relative px-7 py-14 md:px-8 md:py-24 lg:px-14 lg:py-28"
       id="about"
     >
@@ -48,6 +57,6 @@ export function Features() {
         alt=""
         className="absolute bottom-0 left-0 -z-10"
       />
-    </section>
+    </motion.section>
   );
 }

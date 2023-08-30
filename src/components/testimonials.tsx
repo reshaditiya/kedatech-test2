@@ -1,5 +1,7 @@
 import { TestimonialCard } from './testimonial-card';
 import { SectionTitle } from './section-title';
+import { motion } from 'framer-motion';
+import { defaultAnimation } from '../lib/animation';
 
 const testimonials = [
   {
@@ -27,7 +29,16 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="relative px-7 py-14 md:px-8 md:py-24 lg:px-14 lg:py-28">
+    <motion.section
+      variants={defaultAnimation}
+      initial="initial"
+      whileInView="animate"
+      viewport={{
+        once: true,
+        margin: '-240px',
+      }}
+      className="relative px-7 py-14 md:px-8 md:py-24 lg:px-14 lg:py-28"
+    >
       <img
         src="/clouds/cloud-testimonial.svg"
         alt=""
@@ -48,6 +59,6 @@ export function Testimonials() {
           />
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }
