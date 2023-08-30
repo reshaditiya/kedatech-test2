@@ -1,6 +1,5 @@
 import { SectionTitle } from './section-title';
 import {
-  ArrowRight,
   BehanceLogo,
   DribbbleLogo,
   EnvelopeSimple,
