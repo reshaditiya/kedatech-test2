@@ -3,6 +3,7 @@ import { Button } from './button';
 import { Receipt, ArrowRight } from '@phosphor-icons/react';
 import { Fragment } from 'react';
 import { List } from '@phosphor-icons/react';
+import { LoginModal } from './login-modal';
 
 function smoothScroll(
   e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
@@ -38,10 +39,7 @@ export function Navbar() {
         <a href="/" onClick={(e) => smoothScroll(e, 'contact')}>
           <Button variant="link">Kontak</Button>
         </a>
-        <Button>
-          Masuk
-          <ArrowRight className="h-5 w-5" weight="bold" />
-        </Button>
+        <LoginModal />
       </span>
       <MobileNav />
     </nav>

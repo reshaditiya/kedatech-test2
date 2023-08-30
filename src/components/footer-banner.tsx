@@ -1,6 +1,5 @@
 import { SectionTitle } from './section-title';
-import { Button } from './button';
-import { ArrowRight } from '@phosphor-icons/react';
+import { LoginModal } from './login-modal';
 
 export function FooterBanner() {
   return (
@@ -14,10 +13,7 @@ export function FooterBanner() {
         title="Dapatkan UpTech Sekarang!"
         description="Langganan layanan manajemen UpTech sekarang dan masuk ke aplikasi."
       />
-      <Button className="mt-10">
-        Masuk
-        <ArrowRight className="h-5 w-5" weight="bold" />
-      </Button>
+      <LoginModal className="mt-10" />
     </section>
   );
 }
