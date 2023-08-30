@@ -1,17 +1,19 @@
 import { twMerge } from 'tailwind-merge';
+import { ButtonHTMLAttributes } from 'react';
+
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+  icon?: React.ReactElement;
+  variant?: 'primary' | 'link' | 'outline' | 'secondary' | 'icon' | 'ghost';
+  children: React.ReactNode;
+  className?: string;
+};
 
 export function Button({
   variant = 'primary',
   children,
   className,
   ...props
-}: {
-  icon?: React.ReactElement;
-  variant?: 'primary' | 'link' | 'outline' | 'secondary' | 'icon' | 'ghost';
-  children: React.ReactNode;
-  className?: string;
-  props?: React.ReactPropTypes;
-}) {
+}: ButtonProps) {
   const classVariant = {
     primary:
       'flex gap-2 items-center py-4 px-12 bg-cyan-700 text-white rounded-2xl font-display font-semibold hover:bg-cyan-800 active:bg-cyan-900 cursor-pointer transition',
