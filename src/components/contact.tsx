@@ -72,11 +72,7 @@ export function Contact() {
                 className="w-full rounded-3xl border-2 border-slate-200 py-4 pl-14 pr-5"
               />
             </label>
-            <Button
-              variant="primary"
-              icon={<ArrowRight className="h-5 w-5" weight="bold" />}
-              className="mt-5"
-            >
+            <Button variant="primary" className="mt-5">
               Kirim
             </Button>
           </form>

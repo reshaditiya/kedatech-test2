@@ -16,8 +16,9 @@ export function Hero() {
           mudah menggunakan UpTech.
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-4 lg:justify-start">
-          <Button icon={<ArrowRight className="h-5 w-5" weight="bold" />}>
+          <Button>
             Masuk
+            <ArrowRight className="h-5 w-5" weight="bold" />
           </Button>
           <Button variant="outline">Hubungi Kami</Button>
         </div>

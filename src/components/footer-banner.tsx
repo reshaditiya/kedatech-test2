@@ -14,11 +14,9 @@ export function FooterBanner() {
         title="Dapatkan UpTech Sekarang!"
         description="Langganan layanan manajemen UpTech sekarang dan masuk ke aplikasi."
       />
-      <Button
-        icon={<ArrowRight className="h-5 w-5" weight="bold" />}
-        className="mt-10"
-      >
+      <Button className="mt-10">
         Masuk
+        <ArrowRight className="h-5 w-5" weight="bold" />
       </Button>
     </section>
   );
