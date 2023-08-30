@@ -25,7 +25,7 @@ Untuk memulai bekerja pada proyek Uptech by Keda secara lokal, ikuti langkah-lan
    cd kedatech-test2
    ```
 
-2. **Pasang Dependensi:**
+2. **Install Dependensi:**
 
    ```bash
    npm install
