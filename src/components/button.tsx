@@ -1,5 +1,5 @@
 import { twMerge } from 'tailwind-merge';
-import { ButtonHTMLAttributes } from 'react';
+import { ButtonHTMLAttributes, forwardRef } from 'react';
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   icon?: React.ReactElement;
@@ -8,28 +8,29 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   className?: string;
 };
 
-export function Button({
-  variant = 'primary',
-  children,
-  className,
-  ...props
-}: ButtonProps) {
-  const classVariant = {
-    primary:
-      'flex gap-2 items-center py-4 px-12 bg-cyan-700 text-white rounded-2xl font-display font-semibold hover:bg-cyan-800 active:bg-cyan-900 cursor-pointer transition',
-    link: 'flex gap-2 items-center font-display font-semibold text-cyan-800 hover:border-b-2 hover:border-cyan-800 transition h-6',
-    outline:
-      'flex gap-2 items-center py-4 px-12 border border-cyan-800 text-cyan-800 rounded-2xl font-display font-semibold hover:bg-cyan-100 active:bg-cyan-200 cursor-pointer transition',
-    ghost:
-      'flex gap-2 items-center py-4 px-12 text-cyan-800 rounded-2xl font-display font-semibold hover:bg-cyan-100 active:bg-cyan-200 cursor-pointer transition',
-    secondary:
-      'flex gap-2 items-center py-4 px-12 bg-cyan-50 text-cyan-800 rounded-2xl font-display font-semibold hover:bg-cyan-100 active:bg-cyan-200 cursor-pointer transition',
-    icon: 'flex items-center p-4 border border-cyan-800 text-cyan-800 rounded-2xl font-display font-semibold hover:bg-cyan-100 active:bg-cyan-200 cursor-pointer transition',
-  };
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ variant = 'primary', children, className, ...props }, ref) => {
+    const classVariant = {
+      primary:
+        'flex gap-2 items-center py-4 px-12 bg-cyan-700 text-white rounded-2xl font-display font-semibold hover:bg-cyan-800 active:bg-cyan-900 cursor-pointer transition',
+      link: 'flex gap-2 items-center font-display font-semibold text-cyan-800 hover:border-b-2 hover:border-cyan-800 transition h-6',
+      outline:
+        'flex gap-2 items-center py-4 px-12 border border-cyan-800 text-cyan-800 rounded-2xl font-display font-semibold hover:bg-cyan-100 active:bg-cyan-200 cursor-pointer transition',
+      ghost:
+        'flex gap-2 items-center py-4 px-12 text-cyan-800 rounded-2xl font-display font-semibold hover:bg-cyan-100 active:bg-cyan-200 cursor-pointer transition',
+      secondary:
+        'flex gap-2 items-center py-4 px-12 bg-cyan-50 text-cyan-800 rounded-2xl font-display font-semibold hover:bg-cyan-100 active:bg-cyan-200 cursor-pointer transition',
+      icon: 'flex items-center p-4 border border-cyan-800 text-cyan-800 rounded-2xl font-display font-semibold hover:bg-cyan-100 active:bg-cyan-200 cursor-pointer transition',
+    };
 
-  return (
-    <button className={twMerge(classVariant[variant], className)} {...props}>
-      {children}
-    </button>
-  );
-}
+    return (
+      <button
+        ref={ref}
+        className={twMerge(classVariant[variant], className)}
+        {...props}
+      >
+        {children}
+      </button>
+    );
+  },
+);
