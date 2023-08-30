@@ -1,5 +1,5 @@
 {
-  "name": "kedatech",
+  "name": "kedatech-test2",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,6 +12,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@phosphor-icons/react": "^2.0.10",
+    "framer-motion": "^10.16.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tailwind-merge": "^1.14.0"
