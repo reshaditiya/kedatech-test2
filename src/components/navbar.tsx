@@ -1,6 +1,6 @@
 import { Menu, Transition } from '@headlessui/react';
 import { Button } from './button';
-import { Receipt, ArrowRight } from '@phosphor-icons/react';
+import { Receipt } from '@phosphor-icons/react';
 import { Fragment } from 'react';
 import { List } from '@phosphor-icons/react';
 import { LoginModal } from './login-modal';
@@ -35,7 +35,7 @@ function MobileNav() {
     <div className="lg:hidden">
       <Menu as="div" className="relative inline-block text-left">
         <div>
-          <Menu.Button>
+          <Menu.Button as={Fragment}>
             <Button variant="icon">
               <List className="h-6 w-6" weight="bold" />
             </Button>
@@ -94,18 +94,8 @@ function MobileNav() {
                   </Button>
                 )}
               </Menu.Item>
-              <Menu.Item>
-                {({ close }) => (
-                  <Button
-                    variant="primary"
-                    className="flex w-full justify-center py-3"
-                    onClick={close}
-                  >
-                    Masuk
-                    <ArrowRight className="h-5 w-5" weight="bold" />
-                  </Button>
-                )}
-              </Menu.Item>
+
+              <LoginModal />
             </div>
           </Menu.Items>
         </Transition>
