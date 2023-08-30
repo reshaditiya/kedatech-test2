@@ -58,15 +58,10 @@ export function LoginModal({ className, ...props }: LoginModalProps) {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="w-full max-w-xl transform overflow-hidden rounded-3xl bg-white p-12 text-left align-middle shadow-xl transition-all">
-                  <Dialog.Title
-                    as="h3"
-                    className="text-lg font-medium leading-6 text-gray-900"
-                  >
-                    <SectionTitle
-                      title="Masuk Aplikasi"
-                      description="Silahkan masuk untuk mengakses UpTech by Keda"
-                    />
-                  </Dialog.Title>
+                  <SectionTitle
+                    title="Masuk Aplikasi"
+                    description="Silahkan masuk untuk mengakses UpTech by Keda"
+                  />
                   <form
                     action=""
                     onSubmit={(e) => e.preventDefault()}
